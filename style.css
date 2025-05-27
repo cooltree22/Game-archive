@@ -1,0 +1,95 @@
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: white;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #3366cc;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+#hero {
+  background-color: #eaeaea;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  color: #333;
+}
+
+#spiele {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.spiel-kachel {
+  text-align: center;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.spiel-kachel img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.spiel-kachel h3 {
+  margin: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.spiel-kachel a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
