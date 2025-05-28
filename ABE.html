@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angry Birds Epic - Download</title>
+  <link rel="stylesheet" href="style1.css" />
+  <script>
+    // Function to toggle the visibility of download links for each platform
+    function togglePlatform(platformId) {
+      var platformSection = document.getElementById(platformId);
+      platformSection.style.display = platformSection.style.display === "none" ? "block" : "none";
+    }
+    
+    // Function to toggle the visibility of each subsections (like Amazon, Google Play)
+    function toggleSubsection(subsectionId) {
+      var subsection = document.getElementById(subsectionId);
+      subsection.style.display = subsection.style.display === "none" ? "block" : "none";
+    }
+
+
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Angry Birds Epic - Download</h1>
+    <nav>
+      <a href="index.html">Back to Starting Page</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="game-details">
+      <div class="game-image">
+        <img src="images/ABECover1.png" alt="Angry Birds Epic" />
+      </div>
+
+
+
+
+      <div class="game-description">
+        <h2>About the Game</h2>
+        <p><strong>Angry Birds Epic </strong>ist ein rundenbasiertes Rollenspiel, in dem die berühmten Vögel als tapfere Helden gegen Schweine in fantasievollen Schlachten antreten. Das Spiel bietet strategisches Gameplay, Ausrüstungsherstellung und eine humorvolle Geschichte in einer farbenfrohen Fantasy-Welt  .</p>
+        
+ <h3>Notice:</h3><p>In the Original Game the Events, Arena and other Server based events dont work anymore</p>
+
+        <h3>Plattformen:</h3>
+        <div id="platforms">
+          <!-- Android -->
+          <button onclick="togglePlatform('android')">Android</button>
+          <div id="android" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+<li><a href="https://mega.nz/file/TphGwQKR#XqE_OIvpCpz8-XKj36x0kHRV272fvj9eaBqm99ix3sI">AB 3.0.1 TrueVanilla 1.1.0 + Screenfix APK</a></li>
+<li><a href="https://mega.nz/file/WoZn3KbK#y49mL0zOVWplVB9GAQEDtPZU-NMyVRrairEDMT_eyfg">AB 3.0.1 TrueVanilla 1.1.0 APK</a></li>
+<li><a href="https://mega.nz/file/ysAhTbxT#Sy2ZgfBUilXghIHkO-3a9cDxH-clwo0ACApxY1kQHx0">AB 3.0.1 Original APK</a></li>
+</ul>
+</div>
+          <!-- iOS -->
+          <button onclick="togglePlatform('ios')">iOS</button>
+          <div id="ios" class="platform-download" style="display: none; margin-left: 20px;">
+              <ul>
+                <li><a href="https://mega.nz/file/SlI2WaBa#VrSSyufVbMyjzMp4JNW0QhE6beAyIM6GOfFx35_UNuw">ABE 3.0.1 Truevanilla 1.1.0 IPA</a></li>
+                <li><a href="https://mega.nz/file/ChxUmCyR#B8X188RgMI-fehgd1ofFGB2-w_uQdsOrggNAuOjsRLM">ABE 3.0.1 Original IPA</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Windows Phone -->
+          <button onclick="togglePlatform('winphone')">Windows Phone</button>
+          <div id="winphone" class="platform-download" style="display: none; margin-left: 20px;">
+  <ul>
+ <li><a href="https://mega.nz/file/D54DCQ4D#a8Q4GgdMlNZ_UI_ohKyHWyxzhdOcF1haXV1tzaeDXHQ">AB 1.0.14.0  XAP</a></li>
+</ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Game-Archive</p>
+  </footer>
+</body>
+</html>
+
