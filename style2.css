@@ -166,3 +166,62 @@ footer {
     margin-bottom: 10px;
   }
 }
+/* Theme Toggle Button */
+#toggle-theme {
+  position: absolute;
+  top: 180px; /* Below header */
+  right: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+body.dark-mode #toggle-theme {
+  background: #222;
+  color: #ffffff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, 
+body.dark-mode p, body.dark-mode a {
+  color: #ffffff;
+}
+
+body.dark-mode #game-details {
+  background-color: #1c1c1c;
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+  #toggle-theme {
+    top: 120px;
+    right: 10px;
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+header {
+  background-color: #333;
+  color: white;
+}
+
+header h1 {
+  color: white;
+}
+
