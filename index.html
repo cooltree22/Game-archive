@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Game Archive</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+<!-- Dark/Light mode toggle button -->
+<button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+  🌞
+</button>
+
   <header>
 <button id="nav-toggle">☰ Menu</button>
 <nav id="mobile-nav">
@@ -133,5 +138,39 @@
       document.getElementById('mobile-nav').classList.toggle('show');
     });
   </script>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+
+  // Initialize mode from localStorage or default to light
+  function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '🌙'; // Moon icon for dark mode
+    } else {
+      document.body.classList.remove('dark-mode');
+      toggleBtn.textContent = '🌞'; // Sun icon for light mode
+    }
+  }
+
+  // Toggle theme and save to localStorage
+  function toggleTheme() {
+    if (document.body.classList.contains('dark-mode')) {
+      document.body.classList.remove('dark-mode');
+      toggleBtn.textContent = '🌞';
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+
+  toggleBtn.addEventListener('click', toggleTheme);
+
+  // Load theme on page load
+  loadTheme();
+</script>
 </body>
 </html>
