@@ -150,7 +150,7 @@
       toggleBtn.textContent = '🌙'; // Moon icon for dark mode
     } else {
       document.body.classList.remove('dark-mode');
-      toggleBtn.textContent = '🌞'; // Sun icon for light mode
+      toggleBtn.textContent = '☀️'; // Sun icon for light mode
     }
   }
 
@@ -158,7 +158,7 @@
   function toggleTheme() {
     if (document.body.classList.contains('dark-mode')) {
       document.body.classList.remove('dark-mode');
-      toggleBtn.textContent = '🌞';
+      toggleBtn.textContent = '☀️';
       localStorage.setItem('theme', 'light');
     } else {
       document.body.classList.add('dark-mode');
