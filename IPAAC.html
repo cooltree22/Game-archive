@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IPA Archive - Download</title>
-  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="style99.css" />
   <script>
     // Function to toggle the visibility of download links for each platform
     function togglePlatform(platformId) {
@@ -30,6 +30,10 @@
   </header>
 
   <main>
+<!-- Theme Toggle Button (top-right inside white area) -->
+<div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
+  <span id="modeIcon">☀️</span>
+</div>
     <section id="game-details">
       <div class="game-image">
         <img src="images/IPACover1.png" alt="IPA Archive Image" />
@@ -77,6 +81,16 @@
   <footer>
     <p>&copy; 2025 Game-Archive</p>
   </footer>
+<script>
+  function toggleMode() {
+    const body = document.body;
+    const icon = document.getElementById("modeIcon");
+
+    body.classList.toggle("dark-mode");
+    icon.textContent = body.classList.contains("dark-mode") ? "🌙" : "☀️";
+  }
+</script>
+
 </body>
 </html>
 
