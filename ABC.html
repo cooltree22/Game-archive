@@ -345,6 +345,18 @@
     localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
   }
 </script>
+<script>
+  // Make all links open in new tab except those linking exactly to "index.html"
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+      if (link.getAttribute('href') !== 'index.html') {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer'); // security best practice
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
