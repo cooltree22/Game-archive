@@ -30,10 +30,10 @@
   </header>
 
   <main>
-<!-- Theme Toggle Button (top-right inside white area) -->
 <div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
   <span id="modeIcon">☀️</span>
 </div>
+
     <section id="game-details">
       <div class="game-image">
         <img src="images/IPACover1.png" alt="IPA Archive Image" />
@@ -82,12 +82,30 @@
     <p>&copy; 2025 Game-Archive</p>
   </footer>
 <script>
+  // Check saved preference on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedMode = localStorage.getItem('darkMode');
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    if (savedMode === 'enabled') {
+      body.classList.add('dark-mode');
+      icon.textContent = '🌙';
+    } else {
+      icon.textContent = '☀️';
+    }
+  });
+
+  // Toggle dark mode and save preference
   function toggleMode() {
     const body = document.body;
-    const icon = document.getElementById("modeIcon");
+    const icon = document.getElementById('modeIcon');
 
-    body.classList.toggle("dark-mode");
-    icon.textContent = body.classList.contains("dark-mode") ? "🌙" : "☀️";
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    icon.textContent = darkModeEnabled ? '🌙' : '☀️';
+    localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
   }
 </script>
 
