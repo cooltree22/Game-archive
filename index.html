@@ -8,10 +8,7 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-<!-- Dark/Light mode toggle button -->
-<button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-  ☀️
-</button>
+
 
   <header>
 <button id="nav-toggle">☰ Menu</button>
@@ -139,39 +136,37 @@
       document.getElementById('mobile-nav').classList.toggle('show');
     });
   </script>
+ <button id="toggle-theme" aria-label="Toggle Dark Mode">☀️</button>
 
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
 
-  // Initialize mode from localStorage or default to light
-  function loadTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleBtn.textContent = '🌙'; // Moon icon for dark mode
-    } else {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.textContent = '☀️'; // Sun icon for light mode
+    function loadTheme() {
+      const savedTheme = localStorage.getItem('darkMode');
+      if (savedTheme === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleBtn.textContent = '🌙';
+      } else {
+        document.body.classList.remove('dark-mode');
+        toggleBtn.textContent = '☀️';
+      }
     }
-  }
 
-  // Toggle theme and save to localStorage
-  function toggleTheme() {
-    if (document.body.classList.contains('dark-mode')) {
-      document.body.classList.remove('dark-mode');
-      toggleBtn.textContent = '☀️';
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.body.classList.add('dark-mode');
-      toggleBtn.textContent = '🌙';
-      localStorage.setItem('theme', 'dark');
+    function toggletheme() {
+      if (document.body.classList.contains('dark-mode')) {
+        document.body.classList.remove('dark-mode');
+        toggleBtn.textContent = '☀️';
+        localStorage.setItem('darkMode', 'disabled');
+      } else {
+        document.body.classList.add('dark-mode');
+        toggleBtn.textContent = '🌙';
+        localStorage.setItem('darkMode', 'enabled');
+      }
     }
-  }
 
-  toggleBtn.addEventListener('click', toggleTheme);
+    toggleBtn.addEventListener('click', toggletheme);
+    window.addEventListener('DOMContentLoaded', loadTheme);
+  </script>
 
-  // Load theme on page load
-  loadTheme();
-</script>
 </body>
 </html>
