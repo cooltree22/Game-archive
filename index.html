@@ -8,6 +8,12 @@
 </head>
 <body>
   <header>
+<button id="nav-toggle">☰ Menu</button>
+<nav id="mobile-nav">
+  <a href="#games">Games</a>
+  <a href="#about">About</a>
+</nav>
+
     <h1>Game Archive</h1>
     <nav>
       <a href="#games">Games</a>
@@ -95,7 +101,7 @@
 
       <div class="spiel-kachel">
         <a href="MR.html">
-          <img src="images/MRCover1.jpg" alt="Minion Rush Cover" />
+          <img src="images/MRCover1.png" alt="Minion Rush Cover" />
           <h3>Minion Rush [SOON]</h3>
         </a>
       </div>
@@ -122,5 +128,10 @@
   <footer>
     <p>&copy; 2025 Game-Archive</p>
   </footer>
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-nav').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
