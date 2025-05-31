@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beach Buggy Racing Archive</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style2.css" />
+  <script>
+    // Function to toggle the visibility of download links for each platform
+    function togglePlatform(platformId) {
+      var platformSection = document.getElementById(platformId);
+      platformSection.style.display = platformSection.style.display === "none" ? "block" : "none";
+    }
+    
+    // Function to toggle the visibility of each subsections (like Amazon, Google Play)
+    function toggleSubsection(subsectionId) {
+      var subsection = document.getElementById(subsectionId);
+      subsection.style.display = subsection.style.display === "none" ? "block" : "none";
+    }
+
+
+
+  </script>
+</head>
+<body>
+<!-- Theme Toggle Button -->
+<div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
+  <span id="modeIcon">☀️</span>
+</div>
+
+  <header>
+    <h1>Beach Buggy Racing - Download</h1>
+    <nav>
+      <a href="index.html">Back to Starting Page</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="game-details">
+      <div class="game-image">
+        <img src="images/BBRCover1.png" alt="Beach Buggy Racing Cover 1" />
+      </div>
+
+
+
+
+      <div class="game-description">
+        <h2>About the Game</h2>
+        <p><strong>Beach Buggy Racing</strong>  .</p>
+        
+ <h3></h3><p> </p>
+
+        <h2>platforms Planned: IOS, Android, Windows</h2>
+        <div id="platforms">
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Game-Archive</p>
+  </footer>
+<script>
+  // Check saved preference on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedMode = localStorage.getItem('darkMode');
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    if (savedMode === 'enabled') {
+      body.classList.add('dark-mode');
+      icon.textContent = '🌙';
+    } else {
+      icon.textContent = '☀️';
+    }
+  });
+
+  // Toggle dark mode and save preference
+  function toggleMode() {
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    icon.textContent = darkModeEnabled ? '🌙' : '☀️';
+    localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
+  }
+</script>
+<script>
+  // Make all links open in new tab except those linking exactly to "index.html"
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+      if (link.getAttribute('href') !== 'index.html') {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer'); // security best practice
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
