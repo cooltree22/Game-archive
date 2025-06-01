@@ -26,7 +26,7 @@
 <body>
 <!-- Theme Toggle Button -->
 <div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
-  <span id="modeIcon">☀️</span>
+  <span id="modeIcon"☀️</span>
 </div>
 
   <header>
@@ -41,17 +41,124 @@
       <div class="game-image">
         <img src="images/PvZCover5.png" alt="Plants vs. Zombies" />
       </div>
-
+<style>
+  .dark-red {
+    color: darkred;
+  }
+</style>
       <div class="game-description">
         <h2>About the Game</h2>
         <p><strong>Plants vs. Zombies</strong> is a popular tower defense game where you must plant plants to protect your garden from a zombie apocalypse.</p>
+<div class="toggle-section">
 
-<h3>Recommended Versions:</h3><p>Android Phone: Amazon Appstore 8.1.0 or TV Touch 4.0.5 Mod [Phone]<br>
-Android Tablet: PvZ HD 1.1.0 or TV Touch 4.0.5 Mod [Phone]<br>Android TV Controller: TV 1.4 English XBOX Mod or TV 1.0.1 Chinese APK <br>Android TV Remote: TV Touch 4.0.5 Mod (broken vs/co-op mode)<br>Iphone/Ipod Touch: PvZ 1.9.13<br>Ipad: PvZ HD 1.9.12<br>NDS/i/3ds: NDS Version for your Region, dont play DSiware<br>Playstation 3: PvZ 1.00<br>Playstation Vita: Game 1.00 + Update 1.02<br>Windows: PvZ DLC 2.2 + HOTFIX / PvZ Widescreen 1.1.2 / PvZ 1.2.0.1096 GOTY<br> </p>
+  <div class="toggle-header" onclick="toggleText('platforms22')"><h3>Show recommended versions for each platforms</h3></div>
+  <div class="toggle-content" id="platforms22">
+<p>
+Android Phone: <span style="color: darkred;">Amazon Appstore 8.1.0</span> or TV Touch 4.0.5 Mod [Phone]
+<br>
+Android Tablet: <span style="color: darkred;">PvZ HD 1.1.0</span> or TV Touch 4.0.5 Mod [Phone]
+<br>
+Android TV Controller:<span style="color: darkred;"> TV 1.4 English XBOX Mod</span> or TV 1.0.1 Chinese APK 
+<br>
+Android TV Remote: <span style="color: darkred;">TV Touch 4.0.5 Mod (broken vs/co-op mode)</span>
+<br>
+Iphone/Ipod Touch: <span style="color: darkred;">PvZ 1.9.13</span>
+<br>Ipad: <span style="color: darkred;">PvZ HD 1.9.12</span>
+<br>
+NDS/i/3ds: <span style="color: darkred;">NDS Version for your Region</span>
+<br>
+Playstation 3: <span style="color: darkred;">PvZ 1.00 Disc </span>
+<br>
+Playstation Vita: <span style="color: darkred;">Game 1.00 + Update 1.02</span>
+<br>
+Windows: PvZ DLC 2.2 + HOTFIX / <span style="color: darkred;">PvZ HD 2.1 (Widescreen Included)</span> / PvZ 1.2.0.1096 GOTY<br>
+
+ </p>
+
+
+</div></div>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      background-color: #f9f9f9;
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    .toggle-section {
+      width: 760px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode .toggle-section {
+      background-color: #1e1e1e;
+      border-color: #444;
+    }
+
+    .toggle-header {
+      padding: 15px;
+      background-color: #eee;
+      cursor: pointer;
+      font-weight: bold;
+      user-select: none;
+      transition: background-color 0.3s;
+    }
+
+    .dark-mode .toggle-header {
+      background-color: #2a2a2a;
+    }
+
+    .toggle-content {
+      padding: 15px;
+      display: none;
+      border-top: 1px solid #ccc;
+    }
+
+    .dark-mode .toggle-content {
+      border-top: 1px solid #444;
+    }
+
+    .toggle-content.show {
+      display: block;
+    }
+
+    .dark-toggle-button {
+      margin-bottom: 30px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .dark-mode .dark-toggle-button {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+<script>
+  function toggleText(id) {
+    const content = document.getElementById(id);
+    content.classList.toggle('show');
+  }
+</script>
+
+
 
 
         
-        <h3>Platforms:</h3>
+        <h3>Downloads:</h3>
         <div id="platforms">
           <!-- Android -->
           <button onclick="togglePlatform('android')">Android</button>
