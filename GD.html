@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometry Dash Archive</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style2.css" />
+  <script>
+    // Function to toggle the visibility of download links for each platform
+    function togglePlatform(platformId) {
+      var platformSection = document.getElementById(platformId);
+      platformSection.style.display = platformSection.style.display === "none" ? "block" : "none";
+    }
+    
+    // Function to toggle the visibility of each subsections (like Amazon, Google Play)
+    function toggleSubsection(subsectionId) {
+      var subsection = document.getElementById(subsectionId);
+      subsection.style.display = subsection.style.display === "none" ? "block" : "none";
+    }
+
+
+
+  </script>
+</head>
+<body>
+<!-- Theme Toggle Button -->
+<div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
+  <span id="modeIcon">☀️</span>
+</div>
+
+  <header>
+    <h1>Geometry Dash - Download</h1>
+    <nav>
+      <a href="index.html">Back to Starting Page</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="game-details">
+      <div class="game-image">
+        <img src="images/GDCover1.png" alt="Geometry Dash Cover 1" />
+      </div>
+
+
+
+
+      <div class="game-description">
+        <h2>About the Game</h2>
+        <p><strong>Geometry Dash</strong>  .</p>
+        
+ <h3></h3><p> </p>
+
+        <h2>Downloads Planned: Android, IOS, Windows</h2>
+
+        <div id="platforms">
+        <button onclick="togglePlatform('Android')">Android</button>
+          <div id="Android" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+
+<li><a href="https://mega.nz/file/K8hnVbqB#XWU0tHTIqoEiI5ytIqQhHOYzlTIRkGjeLd_zs9WqxU4">Geomtry Dash 2.2.143 [Latest] .APKS</a></li>
+
+
+
+</ul>
+</div>
+
+        <button onclick="togglePlatform('apple')">IOS</button>
+          <div id="apple" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+
+<li><a href="https://www.mediafire.com/file/fz7lrdluv5bp10k/GeometryJump_2.207.ipa">Geometry Dash 2.207 [Latest] .IPA</a></li>
+
+
+
+</ul>
+</div>
+
+        <button onclick="togglePlatform('mc')">Windows</button>
+          <div id="mc" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+
+<li><a href="https://mega.nz/file/70RgDaiC#EXxKwSd6GeQKPfGgg6iwyKRBOsECUXoRaU8e5TJtoLE">Geometry Dash 2.2074a [Latest] .RAR</a></li>
+
+
+
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Game-Archive</p>
+  </footer>
+<script>
+  // Check saved preference on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedMode = localStorage.getItem('darkMode');
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    if (savedMode === 'enabled') {
+      body.classList.add('dark-mode');
+      icon.textContent = '🌙';
+    } else {
+      icon.textContent = '☀️';
+    }
+  });
+
+  // Toggle dark mode and save preference
+  function toggleMode() {
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    icon.textContent = darkModeEnabled ? '🌙' : '☀️';
+    localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
+  }
+</script>
+<script>
+  // Make all links open in new tab except those linking exactly to "index.html"
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+      if (link.getAttribute('href') !== 'index.html') {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer'); // security best practice
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
