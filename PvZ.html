@@ -6,23 +6,7 @@
   <title>Plants vs. Zombies Archive</title>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="style2.css" />
-  <script>
-    // Function to toggle the visibility of download links for each platform
-    function togglePlatform(platformId) {
-      var platformSection = document.getElementById(platformId);
-      platformSection.style.display = platformSection.style.display === "none" ? "block" : "none";
-    }
-    
-    // Function to toggle the visibility of each subsections (like Amazon, Google Play)
-    function toggleSubsection(subsectionId) {
-      var subsection = document.getElementById(subsectionId);
-      subsection.style.display = subsection.style.display === "none" ? "block" : "none";
-    }
-
-
-
-  </script>
-</head>
+  </head>
 <body>
 <!-- Theme Toggle Button -->
 <div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
@@ -41,11 +25,7 @@
       <div class="game-image">
         <img src="images/PvZCover5.png" alt="Plants vs. Zombies" />
       </div>
-<style>
-  .dark-red {
-    color: darkred;
-  }
-</style>
+
       <div class="game-description">
         <h2>About the Game</h2>
         <p><strong>Plants vs. Zombies</strong> is a popular tower defense game where you must plant plants to protect your garden from a zombie apocalypse.</p>
@@ -77,77 +57,8 @@ Windows: PvZ DLC 2.2 + HOTFIX / <span style="color: darkred;">PvZ HD 2.1 (Widesc
 
 
 </div></div>
-    <style>
 
-    
-
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-
-    .toggle-section {
-      width: 760px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .dark-mode .toggle-section {
-      background-color: #1e1e1e;
-      border-color: #444;
-    }
-
-    .toggle-header {
-      padding: 15px;
-      background-color: #eee;
-      cursor: pointer;
-      font-weight: bold;
-      user-select: none;
-      transition: background-color 0.3s;
-    }
-
-    .dark-mode .toggle-header {
-      background-color: #2a2a2a;
-    }
-
-    .toggle-content {
-      padding: 15px;
-      display: none;
-      border-top: 1px solid #ccc;
-    }
-
-    .dark-mode .toggle-content {
-      border-top: 1px solid #444;
-    }
-
-    .toggle-content.show {
-      display: block;
-    }
-
-    .dark-toggle-button {
-      margin-bottom: 30px;
-      padding: 10px 15px;
-      background-color: #333;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    .dark-mode .dark-toggle-button {
-      background-color: #ddd;
-      color: black;
-    }
-  </style>
-<script>
-  function toggleText(id) {
-    const content = document.getElementById(id);
-    content.classList.toggle('show');
-  }
-</script>    
+   
         <h3>Downloads:</h3>
         <div id="platforms">
 
@@ -261,11 +172,7 @@ Windows: PvZ DLC 2.2 + HOTFIX / <span style="color: darkred;">PvZ HD 2.1 (Widesc
               </ul>
             </div>
 </div>
-<style>
-.hidden {
-    visibility: hidden;
-}
-</style>
+
             <button onclick="toggleSubsection('Mods')">Mods</button>
             <div id="Mods" class="subsection-download" style="display: none; margin-left: 20px;">
               <ul>
@@ -484,35 +391,7 @@ Windows: PvZ DLC 2.2 + HOTFIX / <span style="color: darkred;">PvZ HD 2.1 (Widesc
   <footer>
     <p>&copy; 2025 Game-Archive</p>
   </footer>
-<script>
-  // Check saved preference on page load
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedMode = localStorage.getItem('darkMode');
-    const body = document.body;
-    const icon = document.getElementById('modeIcon');
-
-    if (savedMode === 'enabled') {
-      body.classList.add('dark-mode');
-      icon.textContent = '🌙';
-    } else {
-      icon.textContent = '☀️';
-    }
-  });
-
-  // Toggle dark mode and save preference
-  function toggleMode() {
-    const body = document.body;
-    const icon = document.getElementById('modeIcon');
-
-    body.classList.toggle('dark-mode');
-    const darkModeEnabled = body.classList.contains('dark-mode');
-
-    icon.textContent = darkModeEnabled ? '🌙' : '☀️';
-    localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
-  }
-</script>
-
-
+  <script src="script2.js"></script>
 
 
 <p class="hidden"> Old Versions and Links off Stuff </p>

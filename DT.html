@@ -6,62 +6,7 @@
   <title>Deltarune Archives</title>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="style2.css" />
-  <script>
-    // Function to toggle the visibility of download links for each platform
-    function togglePlatform(platformId) {
-      var platformSection = document.getElementById(platformId);
-      platformSection.style.display = platformSection.style.display === "none" ? "block" : "none";
-    }
-    
-    // Function to toggle the visibility of each subsections (like Amazon, Google Play)
-    function toggleSubsection(subsectionId) {
-      var subsection = document.getElementById(subsectionId);
-      subsection.style.display = subsection.style.display === "none" ? "block" : "none";
-    }
-  </script>
-
-<style>
-/* Overlay background */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* Hidden state */
-.hidden {
-  display: none;
-}
-
-/* The popup box itself */
-.popupBox {
-  background: #222;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 300px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-</style>
-<script>
-  function showPopup(event) {
-    event.preventDefault();
-    document.getElementById('popupOverlay').classList.remove('hidden');
-  }
-
-  function closePopup() {
-    document.getElementById('popupOverlay').classList.add('hidden');
-  }
-</script>
+ 
 
 
 </head>
@@ -179,46 +124,7 @@
 <div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
   <span id="modeIcon">☀️</span>
 </div>
-<script>
-  // Check saved preference on page load
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedMode = localStorage.getItem('darkMode');
-    const body = document.body;
-    const icon = document.getElementById('modeIcon');
-
-    if (savedMode === 'enabled') {
-      body.classList.add('dark-mode');
-      icon.textContent = '🌙';
-    } else {
-      icon.textContent = '☀️';
-    }
-  });
-
-  // Toggle dark mode and save preference
-  function toggleMode() {
-    const body = document.body;
-    const icon = document.getElementById('modeIcon');
-
-    body.classList.toggle('dark-mode');
-    const darkModeEnabled = body.classList.contains('dark-mode');
-
-    icon.textContent = darkModeEnabled ? '🌙' : '☀️';
-    localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
-  }
-</script>
-<script>
-  // Make all links open in new tab except those linking exactly to "index.html"
-  window.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('a[href]');
-    links.forEach(link => {
-      if (link.getAttribute('href') !== 'index.html') {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer'); // security best practice
-      }
-    });
-  });
-</script>
-
+  <script src="script2.js"></script>
 
 </body>
 </html>
