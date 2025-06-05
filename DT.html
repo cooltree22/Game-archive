@@ -18,10 +18,52 @@
       var subsection = document.getElementById(subsectionId);
       subsection.style.display = subsection.style.display === "none" ? "block" : "none";
     }
-
-
-
   </script>
+
+<style>
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Hidden state */
+.hidden {
+  display: none;
+}
+
+/* The popup box itself */
+.popupBox {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+</style>
+<script>
+  function showPopup(event) {
+    event.preventDefault();
+    document.getElementById('popupOverlay').classList.remove('hidden');
+  }
+
+  function closePopup() {
+    document.getElementById('popupOverlay').classList.add('hidden');
+  }
+</script>
+
+
 </head>
 <body>
 <!-- Theme Toggle Button -->
@@ -65,12 +107,22 @@
           <div id="pcw" class="platform-download" style="display: none; margin-left: 20px;">
 
 <ul>
- <li><a href="https://mega.nz/file/eQt2WaxD#rabCpNPXi-N-4lzBz1TzJyRjj_JWIS0iAEDtD5k0RZ8">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [MEGA]</a></li>
- <li><a href="https://www.mediafire.com/file/s8z3m3nkv0cxk7p/Deltarune+Build+18701037.rar/file">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Mediafire Mirror]</a></li>
- <li><a href="https://pixeldrain.com/u/wx6aWmqy">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Pixeldrain Mirror]</a></li>
- <li><a href="https://vikingf1le.us.to/f/3mIeHgJKtb#Deltarune%20Build%2018701037.rar">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Vikingfiles Mirror]</a></li>
- <li><a href="https://ulozto.net/file/oMN8F2WIQBfJ/deltarune-build-18701037-rar#!ZGp4AmR2ZJMzZzV5ZmZ2MQAvBQx1ZHczDyRjAKu0rJAipGNkLj==">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Uzlozto Mirror]</a></li>
- </a></li>
+
+
+<a href="#" onclick="showPopup(event)">DT Chapter 1-4 Build 18701037 Steam Cracked RAR Links</a>
+
+<div id="popupOverlay" class="overlay hidden">
+  <div class="popupBox">
+     <li><a href="https://mega.nz/file/eQt2WaxD#rabCpNPXi-N-4lzBz1TzJyRjj_JWIS0iAEDtD5k0RZ8"> [MEGA]</a></li>
+ <li><a href="https://www.mediafire.com/file/s8z3m3nkv0cxk7p/Deltarune+Build+18701037.rar/file">[Mediafire Mirror]</a></li>
+ <li><a href="https://pixeldrain.com/u/wx6aWmqy"> [Pixeldrain Mirror]</a></li>
+ <li><a href="https://vikingf1le.us.to/f/3mIeHgJKtb#Deltarune%20Build%2018701037.rar"> [Vikingfiles Mirror]</a></li>
+ <li><a href="https://ulozto.net/file/oMN8F2WIQBfJ/deltarune-build-18701037-rar#!ZGp4AmR2ZJMzZzV5ZmZ2MQAvBQx1ZHczDyRjAKu0rJAipGNkLj==">[Uzlozto Mirror]</a></li>
+    <button onclick="closePopup()">Close</button>
+
+  </div>
+</div>
+
 </ul>
 </div>
 
