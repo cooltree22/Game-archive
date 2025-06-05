@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deltarune Archives</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style2.css" />
+  <script>
+    // Function to toggle the visibility of download links for each platform
+    function togglePlatform(platformId) {
+      var platformSection = document.getElementById(platformId);
+      platformSection.style.display = platformSection.style.display === "none" ? "block" : "none";
+    }
+    
+    // Function to toggle the visibility of each subsections (like Amazon, Google Play)
+    function toggleSubsection(subsectionId) {
+      var subsection = document.getElementById(subsectionId);
+      subsection.style.display = subsection.style.display === "none" ? "block" : "none";
+    }
+
+
+
+  </script>
+</head>
+<body>
+<!-- Theme Toggle Button -->
+<div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
+  <span id="modeIcon">☀️</span>
+</div>
+
+  <header>
+    <h1>Deltarune - Download</h1>
+    <nav>
+      <a href="index.html">Back to Starting Page</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="game-details">
+      <div class="game-image">
+        <img src="images/DTCover1.png" alt="Deltarune Cover" />
+      </div>
+
+
+
+
+      <div class="game-description">
+        <h2>About the Game</h2>
+        <p><strong>Deltarune </strong>  is a role-playing game by Toby Fox where you guide Kris through a mysterious world with turn-based battles and quirky allies. Choices shape interactions but not the story’s end.
+
+
+
+
+</p>
+        
+ <h3></h3><p>
+
+
+
+        <h3>Downloads:</h3>
+
+        <div id="platforms">
+          <button onclick="togglePlatform('pcw')">Windows</button>
+          <div id="pcw" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+ <li><a href="https://mega.nz/file/eQt2WaxD#rabCpNPXi-N-4lzBz1TzJyRjj_JWIS0iAEDtD5k0RZ8">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [MEGA]</a></li>
+ <li><a href="https://www.mediafire.com/file/s8z3m3nkv0cxk7p/Deltarune+Build+18701037.rar/file">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Mediafire Mirror]</a></li>
+ <li><a href="https://pixeldrain.com/u/wx6aWmqy">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Pixeldrain Mirror]</a></li>
+ <li><a href="https://vikingf1le.us.to/f/3mIeHgJKtb#Deltarune%20Build%2018701037.rar">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Vikingfiles Mirror]</a></li>
+ <li><a href="https://ulozto.net/file/oMN8F2WIQBfJ/deltarune-build-18701037-rar#!ZGp4AmR2ZJMzZzV5ZmZ2MQAvBQx1ZHczDyRjAKu0rJAipGNkLj==">DT Chapter 1-4 Build 18701037 Steam Cracked RAR [Uzlozto Mirror]</a></li>
+ </a></li>
+</ul>
+</div>
+
+
+        <div id="platforms">
+          <button onclick="togglePlatform('ps4')">Playstation 4 [Not dumped yet]</button>
+          <div id="ps4" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+ <li><a href=""></a></li>
+</ul>
+</div>
+
+
+        <div id="platforms">
+          <button onclick="togglePlatform('ps5')">Playstation 5 [Not dumped yet]</button>
+          <div id="ps5" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+ <li><a href=""></a></li>
+</ul>
+</div>
+
+
+          <button onclick="togglePlatform('switch')">Switch [Not dumped yet]</button>
+          <div id="switch" class="platform-download" style="display: none; margin-left: 20px;">
+  <ul>
+ <li><a href=""></a></li></li>
+</ul>
+          </div>
+
+          <button onclick="togglePlatform('switch2')">Switch 2 [Not dumped yet]</button>
+          <div id="switch2" class="platform-download" style="display: none; margin-left: 20px;">
+  <ul>
+ <li><a href=""></a></li></li>
+</ul>
+          </div>
+
+
+
+
+
+   
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Game-Archive</p>
+  </footer>
+<!-- Theme Toggle Button -->
+<div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
+  <span id="modeIcon">☀️</span>
+</div>
+<script>
+  // Check saved preference on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedMode = localStorage.getItem('darkMode');
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    if (savedMode === 'enabled') {
+      body.classList.add('dark-mode');
+      icon.textContent = '🌙';
+    } else {
+      icon.textContent = '☀️';
+    }
+  });
+
+  // Toggle dark mode and save preference
+  function toggleMode() {
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    icon.textContent = darkModeEnabled ? '🌙' : '☀️';
+    localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
+  }
+</script>
+<script>
+  // Make all links open in new tab except those linking exactly to "index.html"
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+      if (link.getAttribute('href') !== 'index.html') {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer'); // security best practice
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
+

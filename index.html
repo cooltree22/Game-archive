@@ -44,14 +44,19 @@
       cursor: pointer;
       text-decoration: none;
       color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000; /* Optional: match the site theme */
     }
 
-    .carousel-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Show full image */
+  display: block;
+}
+
 
 .carousel-caption {
   position: absolute;
@@ -65,19 +70,26 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
 }
 
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 3rem;
-      color: white;
-      background-color: rgba(0,0,0,0.5);
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-      user-select: none;
-      border-radius: 50%;
-    }
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  border-radius: 50%;
+  border: 2px solid white; /* Circular outline */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
     .arrow.left {
       left: 20px;
@@ -163,23 +175,39 @@
  <div class="carousel-container">
   <div class="carousel-slide" id="carouselSlide">
     <!-- Slide 1 -->
-    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/UT.html" target="_blank">
-      <img src="images/UTCover1.png" alt="News 1">
-      <div class="carousel-caption">Added Undertale</div>
+    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/DT.html" target="_blank">
+      <img src="images/DTCover1.png" alt="News 1">
+      <div class="carousel-caption">Added Deltarune<br> (only Windows for now + 5 Links)</div>
     </a>
 
     <!-- Slide 2 -->
-    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/ABSP.html" target="_blank">
-      <img src="images/ABSPCover1.png" alt="News 2">
-      <div class="carousel-caption">Added Angry Birds Space</div>
+    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/UT.html" target="_blank">
+      <img src="images/UTCover1.png" alt="News 2">
+      <div class="carousel-caption">Added Undertale<br> (Fully)</div>
     </a>
 
     <!-- Slide 3 -->
-    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/abs.html" target="_blank">
-      <img src="images/ABSCover2.png" alt="News 3">
-      <div class="carousel-caption">Added Angry Birds Seasons</div>
+    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/ABSP.html" target="_blank">
+      <img src="images/ABSPCover1.png" alt="News 3">
+      <div class="carousel-caption">Added Angry Birds Space<br> (More Android versions soon!) </div>
     </a>
+  
+    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/abs.html" target="_blank">
+      <img src="images/ABSCover2.png" alt="News 4">
+      <div class="carousel-caption">Added Angry Birds Seasons <br>(More Android & Ipad versions Soon!) </div>
+    </a>
+    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/ABR.html" target="_blank">
+      <img src="images/ABRCover1.png" alt="News 5">
+      <div class="carousel-caption">Added Angry Birds Rio<br> (More Android & IOS versions soon!) </div>
+    </a>
+    <a class="carousel-item" href="https://cooltree22.github.io/Game-archive/GD.html" target="_blank">
+      <img src="images/GDCover1.png" alt="News 6">
+      <div class="carousel-caption">Added Geometry Dash<br> (Only latest versions for now adding older ones soon) </div>
+    </a>
+
+
   </div>
+
 
   <div class="arrow left" onclick="moveSlide(-1)">❮</div>
   <div class="arrow right" onclick="moveSlide(1)">❯</div>
@@ -337,7 +365,7 @@
     <div class="spiel-kachel">
         <a href="DT.html">
           <img src="images/DTCover1.png" alt="Deltarune Cover" />
-          <h3>Deltarune [SOON]</h3>
+          <h3>Deltarune</h3>
         </a>
       </div>
 
