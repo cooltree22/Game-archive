@@ -22,6 +22,23 @@
 
 
   </script>
+<script>
+  function showPopup(event) {
+    event.preventDefault();
+    const overlay = document.getElementById('popupOverlay');
+    overlay.classList.remove('hidden');
+
+    // Enable outside click to close
+    overlay.onclick = function () {
+      closePopup();
+    };
+  }
+
+  function closePopup() {
+    document.getElementById('popupOverlay').classList.add('hidden');
+  }
+</script>
+
 </head>
 <body>
 <!-- Theme Toggle Button -->
@@ -60,17 +77,37 @@
           <div id="pcw" class="platform-download" style="display: none; margin-left: 20px;">
 
 <ul>
- <li><a href="https://mega.nz/file/CYch3bob#3SyLRpltK-v7uhisqr00IyI7yjqMy4LJovVuKq7Tyz8">UT 1.08c GOG RAR</a></li>
+<a href="#" onclick="showPopup(event)">UT 1.08c GOG Pre-Installed RAR Links</a>
+ <div id="popupOverlay" class="overlay hidden">
+  <div class="popupBox" onclick="event.stopPropagation()">
+    <li><a href="https://mega.nz/file/CYch3bob#3SyLRpltK-v7uhisqr00IyI7yjqMy4LJovVuKq7Tyz8">[MEGA]</a></li>
+ <li><a href="https://www.mediafire.com/file/92efu4ivcyqvmbo/Undertale-Game-Archive+[v1.08c+++GOG].rar/file">[Mediafire Mirror]</a></li>
+ <li><a href="https://pixeldrain.com/u/dvJ5ETSf">[Pixeldrain Mirror]</a></li>
+ <li><a href="https://vikingfile.com/f/XOPTOxa5hA#Undertale-Game-Archive%20%5Bv1.08c%20%2B%20GOG%5D.rar
+">[Vikingfile Mirror]</a></li>
+ <li><a href="https://content-provider43.greencdn.link/Ps;Hs;up=1;uid=25463925;cid=1622858996;uip=87.165.253.248;aff=apis.uloz.to;did=uloz-to;fide=tpAkV2o;fs=BMG1fKDGNKwx;hid=NDRK53PD;rid=1527713401;tm=1749295878;ut=vd;rs=0;fet=download_cloud;He;ch=52b56a5a129b29f53c49cd1a758d3318;Pe/file/BMG1fKDGNKwx/undertale-game-archive-v1-08c-gog-rar?bD&u=25463925&c=1622858996&De">[Uzlozto Mirror]</a></li>
+
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
  <li><a href="https://mega.nz/file/fQEzQDSS#jay3gt-IFIMPUpO3m4r7eWB4-xE0nGM4v3K2VvWBtv4">UT 1.08c Steam Cracked ZIP </a></li>
  <li><a href="https://mega.nz/file/iMlmzaiD#jRuEW9xmSdE06LphZWFmGXb6DQAjAa1ZIB7P6A3Fo2A">UT 1.01 Steam Cracked ZIP </a></li>
 </ul>
 </div>
+
+
+
+
+
+
+
 
         <div id="platforms">
           <button onclick="togglePlatform('vita')">Playstation Vita</button>
           <div id="vita" class="platform-download" style="display: none; margin-left: 20px;">
 
 <ul>
+
  <li><a href="https://mega.nz/file/PEchUCiL#mLJ_nPJbAcuU9BB6KWzPMBlZ7XaHRqg8CLNAigpgsX8">UT USA PKG</a></li>
  <li><a href="https://mega.nz/file/aAFmSSqC#U1L5aswCFxjwPeAN9uvzrmJFvJkYKbiO1mPBMNOTkPs">UT EUR PKG</a></li>
  <li><a href="https://mega.nz/file/XE0GTJwI#zjVDTYL85qIy2F-U175OKtQVf7bnOeeF_4jxgP5vNxQ">UT JPN PKG</a></li>

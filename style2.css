@@ -1,3 +1,34 @@
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Hidden state */
+.hidden {
+  display: none;
+}
+
+/* The popup box itself */
+.popupBox {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
 /* Base Styles */
 body {
   font-family: Arial, sans-serif;
