@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undertale Archives</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style2.css" />
+  <script>
+    // Function to toggle the visibility of download links for each platform
+    function togglePlatform(platformId) {
+      var platformSection = document.getElementById(platformId);
+      platformSection.style.display = platformSection.style.display === "none" ? "block" : "none";
+    }
+    
+    // Function to toggle the visibility of each subsections (like Amazon, Google Play)
+    function toggleSubsection(subsectionId) {
+      var subsection = document.getElementById(subsectionId);
+      subsection.style.display = subsection.style.display === "none" ? "block" : "none";
+    }
+
+
+
+  </script>
+</head>
+<body>
+<!-- Theme Toggle Button -->
+<div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
+  <span id="modeIcon">☀️</span>
+</div>
+
+  <header>
+    <h1>Undertale - Download</h1>
+    <nav>
+      <a href="index.html">Back to Starting Page</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="game-details">
+      <div class="game-image">
+        <img src="images/UTCover1.png" alt="Undertale Cover" />
+      </div>
+
+
+
+
+      <div class="game-description">
+        <h2>About the Game</h2>
+        <p><strong>Undertale </strong> is a unique RPG where players can choose to fight or befriend monsters, affecting the story and outcomes. Its quirky humor, memorable characters, and emotional depth make it a standout in indie gaming.</p>
+        
+ <h3></h3><p>
+
+
+
+        <h3>Downloads:</h3>
+
+        <div id="platforms">
+          <button onclick="togglePlatform('pcw')">Windows</button>
+          <div id="pcw" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+ <li><a href="https://mega.nz/file/CYch3bob#3SyLRpltK-v7uhisqr00IyI7yjqMy4LJovVuKq7Tyz8">UT 1.08c GOG RAR</a></li>
+ <li><a href="https://mega.nz/file/fQEzQDSS#jay3gt-IFIMPUpO3m4r7eWB4-xE0nGM4v3K2VvWBtv4">UT 1.08c Steam Cracked ZIP </a></li>
+ <li><a href="https://mega.nz/file/iMlmzaiD#jRuEW9xmSdE06LphZWFmGXb6DQAjAa1ZIB7P6A3Fo2A">UT 1.01 Steam Cracked ZIP </a></li>
+</ul>
+</div>
+
+        <div id="platforms">
+          <button onclick="togglePlatform('vita')">Playstation Vita</button>
+          <div id="vita" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+ <li><a href="https://mega.nz/file/PEchUCiL#mLJ_nPJbAcuU9BB6KWzPMBlZ7XaHRqg8CLNAigpgsX8">UT USA PKG</a></li>
+ <li><a href="https://mega.nz/file/aAFmSSqC#U1L5aswCFxjwPeAN9uvzrmJFvJkYKbiO1mPBMNOTkPs">UT EUR PKG</a></li>
+ <li><a href="https://mega.nz/file/XE0GTJwI#zjVDTYL85qIy2F-U175OKtQVf7bnOeeF_4jxgP5vNxQ">UT JPN PKG</a></li>
+</ul>
+</div>
+        <div id="platforms">
+          <button onclick="togglePlatform('ps4')">Playstation 4</button>
+          <div id="ps4" class="platform-download" style="display: none; margin-left: 20px;">
+
+<ul>
+ <li><a href="https://mega.nz/file/HNMHEKqS#_gZiisSq86NR7T8Tx9rdF9P46P7YMhvUCTq66X0bg7o">UT USA PKG</a></li>
+ <li><a href="https://mega.nz/file/SNUjDABY#QPfyo9bd7rR6fxs0_6nOk4562TZJpyXjPE_xXDFRGd8">UT EUR PKG</a></li>
+</ul>
+</div>
+
+
+          <button onclick="togglePlatform('switch')">Switch</button>
+          <div id="switch" class="platform-download" style="display: none; margin-left: 20px;">
+  <ul>
+ <li><a href="https://mega.nz/file/3BdjxJDB#2h3zlb8turZvcdeFacjevC7Otux5tfKnXzyhZQBw6vs">UT Game 0 NSP </a></li>
+ <li><a href="https://mega.nz/file/KckgSKLR#bNHUgPQGRUfzpMRr11gLjTVzEShJKubHXvu5lSK-49k">UT Update 131072 NSP </a></li>
+</ul>
+          </div>
+
+
+
+
+          <button onclick="togglePlatform('ports')">Unofficial Ports</button>
+          <div id="ports" class="platform-download" style="display: none; margin-left: 20px;">
+              <ul>
+                <li><a href="https://mega.nz/file/3gBExbiC#tM4vhR1a8N1ne74767sCZLGCKXeBpsK48J36cN-EtJc">UT 1.08 Android Port APK </a></li>
+                <li><a href="https://mega.nz/file/XBUBVTpa#QfnuBW3cC14q-qrpc-Scm8MXAag7EeZ3cWAQJ3x3iPs">UT 1.08 IOS Port IPA </a></li>
+              </ul>
+           
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Game-Archive</p>
+  </footer>
+<!-- Theme Toggle Button -->
+<div id="toggle-theme" onclick="toggleMode()" aria-label="Toggle theme" role="button">
+  <span id="modeIcon">☀️</span>
+</div>
+<script>
+  // Check saved preference on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedMode = localStorage.getItem('darkMode');
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    if (savedMode === 'enabled') {
+      body.classList.add('dark-mode');
+      icon.textContent = '🌙';
+    } else {
+      icon.textContent = '☀️';
+    }
+  });
+
+  // Toggle dark mode and save preference
+  function toggleMode() {
+    const body = document.body;
+    const icon = document.getElementById('modeIcon');
+
+    body.classList.toggle('dark-mode');
+    const darkModeEnabled = body.classList.contains('dark-mode');
+
+    icon.textContent = darkModeEnabled ? '🌙' : '☀️';
+    localStorage.setItem('darkMode', darkModeEnabled ? 'enabled' : 'disabled');
+  }
+</script>
+<script>
+  // Make all links open in new tab except those linking exactly to "index.html"
+  window.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+      if (link.getAttribute('href') !== 'index.html') {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer'); // security best practice
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
+
