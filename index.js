@@ -1,23 +1,3 @@
-const slide = document.getElementById('carouselSlide');
-const dotsContainer = document.getElementById('dots');
-
-if (slide && dotsContainer) {
-  const totalSlides = slide.children.length;
-  let currentIndex = 0;
-
-  // Create dots
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  }
-
-  const dots = document.querySelectorAll('.dot');
-
-  // Init
-  updateCarousel();
-}
 
 
 
