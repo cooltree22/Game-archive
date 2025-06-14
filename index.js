@@ -1,7 +1,8 @@
- const slide = document.getElementById('carouselSlide');
-  const totalSlides = slide.children.length;
-  const dotsContainer = document.getElementById('dots');
+const slide = document.getElementById('carouselSlide');
+const dotsContainer = document.getElementById('dots');
 
+if (slide && dotsContainer) {
+  const totalSlides = slide.children.length;
   let currentIndex = 0;
 
   // Create dots
@@ -14,28 +15,10 @@
 
   const dots = document.querySelectorAll('.dot');
 
-  function updateCarousel() {
-    slide.style.transform = `translateX(-${currentIndex * 100}%)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentIndex].classList.add('active');
-  }
-
-  function moveSlide(direction) {
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-    updateCarousel();
-  }
-
-  function goToSlide(index) {
-    currentIndex = index;
-    updateCarousel();
-  }
-
   // Init
   updateCarousel();
+}
 
-   document.getElementById('nav-toggle').addEventListener('click', function () {
-      document.getElementById('mobile-nav').classList.toggle('show');
-    });
 
 
     const toggleBtn = document.getElementById('toggle-theme');
@@ -66,8 +49,28 @@
     toggleBtn.addEventListener('click', toggletheme);
     window.addEventListener('DOMContentLoaded', loadTheme);
 
+function updateLastUpdated() {
 
+const lastUpdated = new Date("2025-06.14");
 
+  const now = new Date();
+  const diffTime = now - lastUpdated;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
+let color = "green";
+if (diffDays >= 31) {
+  color = "red";
+} else if (diffDays === 14) {
+  color = "orange";
+} else if (diffDays >= 7) {
+  color = "goldenrod";
+}
+
+  const label = document.getElementById("last-updated");
+  label.textContent = `⏱ Updated ${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
+  label.style.backgroundColor = color;
+}
+
+window.addEventListener("DOMContentLoaded", updateLastUpdated);
 
 
