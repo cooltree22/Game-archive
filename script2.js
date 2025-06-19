@@ -79,3 +79,22 @@ function closePopup(popupId) {
   document.body.style.overflow = 'auto';
 }
 
+function showPopup(event, popupId) {
+  event.preventDefault();
+  const overlay = document.getElementById(popupId);
+  const popupBox = overlay.querySelector('.popupBox');
+
+  overlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+
+  // Trigger animation
+  popupBox.classList.remove('show'); // reset if shown before
+  void popupBox.offsetWidth; // reflow trick to restart animation
+  popupBox.classList.add('show');
+
+  overlay.onclick = function (e) {
+    if (e.target === overlay) {
+      closePopup(popupId);
+    }
+  };
+}
