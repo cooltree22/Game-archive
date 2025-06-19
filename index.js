@@ -28,8 +28,35 @@
 
     toggleBtn.addEventListener('click', toggletheme);
     window.addEventListener('DOMContentLoaded', loadTheme);
+window.addEventListener("DOMContentLoaded", () => {
+  const spiele = document.getElementById("spiele");
+  if (spiele) {
+    spiele.classList.add("fade-in");
+  }
+});
 
 function updateLastUpdated() {
+document.addEventListener("DOMContentLoaded", () => {
+  const spiele = document.getElementById("spiele");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          spiele.classList.add("visible");
+          observer.unobserve(spiele); // Trigger only once
+        }
+      });
+    },
+    {
+      threshold: 0.1 // Adjust if needed
+    }
+  );
+
+  if (spiele) {
+    observer.observe(spiele);
+  }
+});
 
 const lastUpdated = new Date("2025-06.14");
 
@@ -54,3 +81,23 @@ if (diffDays >= 31) {
 window.addEventListener("DOMContentLoaded", updateLastUpdated);
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const tiles = document.querySelectorAll(".spiel-kachel");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1
+    }
+  );
+
+  tiles.forEach(tile => observer.observe(tile));
+});
