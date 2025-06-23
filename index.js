@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const lastUpdated = new Date("2025-06.14");
+const lastUpdated = new Date("2025-06.23");
 
   const now = new Date();
   const diffTime = now - lastUpdated;
